@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tirgul 2</title>
   </head>
-  <body class="bg-gray-100">
-    <nav class="bg-blue-600 p-4">
-      <a href="/src/login.html"
-         class="text-white font-bold px-4 py-2 rounded hover:bg-blue-700">
-        Login
-      </a>
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-600 px-6 py-4 flex items-center justify-between shadow">
+      <span class="text-white text-xl font-bold">Tirgul 2</span>
+      <div class="flex gap-2">
+        <a href="/src/login.html"
+           class="text-white font-semibold px-4 py-2 rounded hover:bg-blue-700">Login</a>
+        <a href="/src/register.html"
+           class="bg-white text-blue-600 font-semibold px-4 py-2 rounded hover:bg-gray-100">Register</a>
+      </div>
     </nav>
+
+    <main class="max-w-2xl mx-auto mt-16 text-center px-4">
+      <h1 class="text-3xl font-bold mb-4">Welcome</h1>
+      <p class="text-gray-600">Please login or register to continue.</p>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
