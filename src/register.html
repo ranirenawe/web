@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center py-8">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
+    <a href="/index.html" class="inline-block mb-4 text-blue-500 hover:underline">← Back</a>
+    <h1 class="text-2xl font-bold mb-6 text-center">Register</h1>
+
+    <form id="registerForm" action="/src/register.html" method="post" class="space-y-4">
+      <div>
+        <label for="userInput" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+        <input id="userInput" type="text" placeholder="Username" required autocomplete="username"
+               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="mailInput" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input id="mailInput" type="email" placeholder="Email" required autocomplete="email"
+               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="passInput" class="block text-sm font-medium text-gray-700 mb-1">Password (min 6 characters)</label>
+        <div class="relative">
+          <input id="passInput" type="password" placeholder="Password" required autocomplete="new-password"
+                 class="w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <button type="button" onclick="togglePassword('passInput', this)"
+                  class="absolute inset-y-0 right-0 px-3 text-gray-500 hover:text-gray-700">👁</button>
+        </div>
+      </div>
+
+      <div>
+        <label for="confirmInput" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+        <div class="relative">
+          <input id="confirmInput" type="password" placeholder="Confirm Password" required autocomplete="new-password"
+                 class="w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <button type="button" onclick="togglePassword('confirmInput', this)"
+                  class="absolute inset-y-0 right-0 px-3 text-gray-500 hover:text-gray-700">👁</button>
+        </div>
+      </div>
+
+      <div>
+        <label for="dateInput" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+        <input id="dateInput" type="date" required
+               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <button type="submit"
+              class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        Register
+      </button>
+    </form>
+    <div id="registerMessage" class="mt-2 text-red-500 text-center text-sm"></div>
+
+    <a href="/src/login.html" class="block text-center mt-4 text-blue-500 hover:underline">
+      Already have an account? Login
+    </a>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>
